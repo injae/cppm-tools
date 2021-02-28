@@ -16,7 +16,7 @@ add_custom_target(cppm-tools)
 include(CMakePackageConfigHelpers)
 
 configure_package_config_file(
-    ${PROJECT_NAME}.cmake.in ${PROJECT_NAME}.cmake
+    ${PROJECT_NAME}-config.cmake.in ${PROJECT_NAME}-config.cmake
     INSTALL_DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}
 )
 
