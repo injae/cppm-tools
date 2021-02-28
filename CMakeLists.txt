@@ -15,11 +15,6 @@ add_custom_target(cppm-tools)
 
 include(CMakePackageConfigHelpers)
 
-configure_package_config_file(
-    ${PROJECT_NAME}-config.cmake.in ${PROJECT_NAME}-config.cmake
-    INSTALL_DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}
-)
-
 set(CPPM_TOOLS_INSTALL_DESTINATION lib/cmake/${PROJECT_NAME})
 
 #-- version file setting
@@ -34,10 +29,15 @@ install(FILES
     DESTINATION ${CPPM_TOOLS_INSTALL_DESTINATION}
 )
 
+configure_package_config_file(
+    ${PROJECT_NAME}-config.cmake.in ${PROJECT_NAME}-config.cmake
+    INSTALL_DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}
+)
+
 #-- cmake package file export
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config.cmake
     DESTINATION ${CPPM_TOOLS_INSTALL_DESTINATION}
 )
 
-install(FILES cmake/core_load.cmake ${CPPM_TOOLS_INSTALL_DESTINATION})
+install(FILES cmake/core_load.cmake DESTINATION ${CPPM_TOOLS_INSTALL_DESTINATION})
