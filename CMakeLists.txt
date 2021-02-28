@@ -16,9 +16,8 @@ add_custom_target(cppm-tools)
 include(CMakePackageConfigHelpers)
 
 configure_package_config_file(
-    cmake/${PROJECT_NAME}.cmake.in ${PROJECT_NAME}.cmake
-    INSTALL_DESTINATION
-        ${CORROSION_INSTALL_PREFIX}${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}
+    ${PROJECT_NAME}.cmake.in ${PROJECT_NAME}.cmake
+    INSTALL_DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}
 )
 
 set(CPPM_TOOLS_INSTALL_DESTINATION lib/cmake/${PROJECT_NAME})
