@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(cppm-tools VERSION 0.0.13 LANGUAGE NONE)
+project(cppm-tools VERSION 0.0.13 LANGUAGES NONE)
 
 if(NOT CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     set(_IS_CPPM_TOOLS_TOP_LEVEL ON)
