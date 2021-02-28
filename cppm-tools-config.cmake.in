@@ -4,7 +4,7 @@ if(cppm-tools_FOUND)
     return()
 endif()
 
-list(APPEND CMAKE_MODULE_PATH "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_DATADIR@/cmake")
+list(APPEND CMAKE_MODULE_PATH "${PACKAGE_PREFIX_DIR}/lib/cmake")
 include(core_load)
 
 
